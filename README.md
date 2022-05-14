@@ -12,7 +12,8 @@ import '@antipodes-medical/back-to-top';
 
 ## Utilisation
 
-```twig
+```html
+
 <back-to-top>
     Contenu du back to top
 </back-to-top>
@@ -28,6 +29,13 @@ Rend le bouton visible à une distance spécifiée.
 | ---------- | ------ | ------- | 
 | `distance` | Number | `800` |
 
+```html
+
+<back-to-top distance="200">
+    Contenu du back to top
+</back-to-top>
+```
+
 ### Rounded
 
 Donnez au bouton la forme d'un cercle.
@@ -35,6 +43,31 @@ Donnez au bouton la forme d'un cercle.
 | Name | Type | Default | 
 | --------- | ------- | ------- | 
 | `rounded` | Boolean | `true` |
+
+```html
+
+<back-to-top rounded="false">
+    Contenu du back to top
+</back-to-top>
+```
+
+## Évènements disponibles
+
+### back-to-top:is-active
+
+Lorsque le bouton est actif.
+
+```javascript
+window.addEventListener('back-to-top:is-active', () => console.log('back to top is active'));
+```
+
+### back-to-top:is-hidden
+
+Lorsque le bouton est inactif.
+
+```javascript
+window.addEventListener('back-to-top:is-hidden', () => console.log('back to top is hidden'));
+```
 
 ## Styles disponibles
 
